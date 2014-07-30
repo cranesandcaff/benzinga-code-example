@@ -1,0 +1,7 @@
+.portfolio {
+  @include span-columns(6);
+  @include pad(1rem);
+  h4 {
+    @include span-columns(3 of 6);
+  }
+}

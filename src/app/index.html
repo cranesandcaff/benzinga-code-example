@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="benzingaStockExchangeApp">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Stock Exchange</title>
+    <!-- inject:vendor:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <a href="/documentation/module-benzingaStockExchangeApp.html">Documentation</a>
+    <div class="main-app" ng-controller="portfolioCtrl">
+      <div id="flash" class="flash fx-bounce-down fx-speed-200" ng-class="flash.type" ng-if="flash.unread" ng-click="removeFlash()">
+        <h3 ng-bind="flash.message"></h3>
+        <h4 ng-bind="'Close'"></h4>
+      </div>
+      <ng-include src="'globalTemplates/header.html'"></ng-include>
+      <ng-include src="'portfolio/templates/details.html'"></ng-include>
+      <ng-include src="'portfolio/templates/currentPortfolio.html'"></ng-include>
+    </div>
+    <!-- inject:vendor:js -->
+    <script src="/angular/angular.js"></script>
+    <script src="/json3/lib/json3.js"></script>
+    <script src="/es5-shim/es5-shim.js"></script>
+    <script src="/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/angular-animate/angular-animate.js"></script>
+    <script src="/lodash/dist/lodash.compat.js"></script>
+    <script src="/ngstorage/ngStorage.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/app.js"></script>
+    <script src="/benzinga-stock-exchange-templates.js"></script>
+    <script src="/portfolio/Portfolio.js"></script>
+    <script src="/portfolio/portfolioCtrl.js"></script>
+    <script src="/services/FlashService.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

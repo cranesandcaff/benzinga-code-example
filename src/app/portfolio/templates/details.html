@@ -1,0 +1,23 @@
+<section class="details">
+  <div ng-show="currentCompany">
+    <header>
+      <h3 ng-bind="currentCompany.name"></h3>
+    </header>
+    <table class="table">
+      <tr>
+        <th>Bid</th>
+        <th>Ask</th>
+      </tr>
+      <tr>
+        <td ng-bind="currentCompany.bid | currency"></td>
+        <td ng-bind="currentCompany.ask | currency"></td>
+      </tr>
+    </table>
+    <input type="number" name="symbol_search" ng-model="quantity" placeholder="Quantity" min="0">
+    <button name="buy" class="btn" ng-click="buy(currentCompany, quantity)">Buy</button>
+    <button name="sell" class="btn" ng-click="sell(currentCompany, quantity)">Sell</button>
+  </div>
+  <div ng-hide="currentCompany" class="fx-fade-up">
+    <h2>Search for a symbol in the upper right hand corner.</h2>
+  </div>
+</section>

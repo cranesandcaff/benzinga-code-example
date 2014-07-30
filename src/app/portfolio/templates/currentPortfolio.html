@@ -1,0 +1,21 @@
+<section class="portfolio">
+  <header>
+    <h4>Current Portfolio</h4>
+    <h4 ng-bind="'Cash: '+ portfolio.balance"> </h4>
+  </header>
+  <table class="table">
+    <tr>
+      <th>Company</th>
+      <th>Quantity</th>
+      <th colspan="2">Price Paid</th>
+    </tr>
+    <tr ng-repeat="stock in portfolio.owned">
+      <td ng-bind="stock.name"></td>
+      <td ng-bind="stock.quantity"></td>
+      <td ng-bind="stock.vwap | currency"></td>
+      <td>
+        <button ng-click="marketSearch(stock.symbol)">View Stock</button>
+      </td>
+    </tr>
+  </table>
+</section>

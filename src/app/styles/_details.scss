@@ -1,0 +1,4 @@
+.details {
+  @include span-columns(6);
+  padding: 1rem;
+}

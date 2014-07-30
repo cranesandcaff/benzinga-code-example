@@ -1,0 +1,50 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'base/base';
+@import 'details';
+@import 'currentPortfolio';
+.main-app {
+  @include outer-container();
+  border: 3px $medium-gray solid;
+}
+header.global {
+  padding: 1rem;
+  border-bottom: 3px #666 solid;
+  @include row();
+  @include span-columns(12);
+  h3 {
+    @include span-columns(6 of 12);
+    display: inline-block;
+  }
+}
+
+.search {
+  position:relative;
+  @include span-columns(6 of 12);
+  > input[type=text],
+  > button {
+    display: block;
+    height: 3rem;
+    border-radius: 0;
+    padding: 1em;
+  }
+  > button {
+    background-color: #2ecc71;
+    color: white;
+    position: absolute;
+    right: -0.2rem;
+    top: 0;
+  }
+}
+.flash{
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  &.error {
+    @extend %flash-error;
+  }
+}

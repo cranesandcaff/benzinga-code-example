@@ -1,0 +1,33 @@
+{
+  "name": "benzinga-stock-exchange",
+  "main": [
+    "/dist/benzinga-stock-exchange.min.js",
+    "/dist/benzinga-stock-exchange.min.css"
+  ],
+  "version": "0.1.0",
+  "description": "Code Example",
+  "authors": [
+    "Patrick Cauley"
+  ],
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "klei.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "1.2.16",
+    "json3": "~3.3.1",
+    "es5-shim": "~3.1.0",
+    "angular-sanitize": "1.2.16",
+    "angular-animate": "1.2.16",
+    "lodash": "~2.4.1",
+    "ngstorage": "~0.3.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.14"
+  }
+}
